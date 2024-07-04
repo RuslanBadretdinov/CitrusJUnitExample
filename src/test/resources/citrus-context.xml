@@ -22,6 +22,13 @@
 
     <citrus:global-variables>
         <citrus:variable name="project.name" value="Citrus Integration Tests"/>
+        <citrus:file path="classpath:citrus.properties"/>
     </citrus:global-variables>
-    	
+
+    <citrus-http:client
+            id="restClientReqres"
+            request-url="${base.url}"
+            content-type="application/json"
+            timeout="15000"/>
+
 </beans>
